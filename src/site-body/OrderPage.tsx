@@ -6,7 +6,7 @@ function Order() {
         <>
             {cartItems.map(item => {
                 return (
-                    <div>
+                    <div key={item.id}>
 
                     </div>
                 )
