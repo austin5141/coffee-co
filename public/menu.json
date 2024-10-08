@@ -1,56 +1,38 @@
 [
     {
         "id": 1,
-        "name": "Placeholder Text",
-        "price": 2.99,
+        "name": "Iced Frappuccino",
+        "price": 4.99,
         "img": "/iced-coffee.jpg"
     },
     {
         "id": 2,
-        "name": "Placeholder Text",
+        "name": "Latte",
         "price": 2.99,
         "img": "/espresso.jpg"
     },
     {
         "id": 3,
-        "name": "Placeholder Text",
-        "price": 2.99,
+        "name": "Black Espresso",
+        "price": 1.99,
         "img": "/black.jpg"
     },
     {
         "id": 4,
-        "name": "Placeholder Text",
+        "name": "Cappuccino",
         "price": 2.99,
-        "img": "/black.jpg"
+        "img": "/cappuccino.jpg"
     },
     {
         "id": 5,
-        "name": "Placeholder Text",
-        "price": 2.99,
-        "img": "/black.jpg"
+        "name": "Americano",
+        "price": 3.99,
+        "img": "/americano.jpg"
     },
     {
         "id": 6,
-        "name": "Placeholder Text",
-        "price": 2.99,
-        "img": "/black.jpg"
-    },
-    {
-        "id": 7,
-        "name": "Placeholder Text",
-        "price": 2.99,
-        "img": "/black.jpg"
-    },
-    {
-        "id": 8,
-        "name": "Placeholder Text",
-        "price": 2.99,
-        "img": "/black.jpg"
-    },
-    {
-        "id": 9,
-        "name": "Placeholder Text",
-        "price": 2.99,
-        "img": "/black.jpg"
-    }    
+        "name": "Macchiato",
+        "price": 4.99,
+        "img": "/macchiato.jpg"
+    }
 ]
