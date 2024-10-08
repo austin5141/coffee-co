@@ -1,4 +1,4 @@
-import { useCart } from "../context/ShoppingCartContext";
+import { useCart } from "../../context/ShoppingCartContext";
 
 interface Props {
     id: number,
@@ -8,6 +8,7 @@ interface Props {
 }
 
 function MenuItem(props: Props) {
+  
 
   const { getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeItem } = useCart()
   
@@ -26,7 +27,7 @@ function MenuItem(props: Props) {
                   <span className="text-2xl text-rose-300">{quantity} in cart</span>
                   <button onClick={ () => increaseItemQuantity(props.id)} className="bg-rose-500 w-7 h-8 font-poppins font-medium rounded-md text-white">+</button>
                 </div>
-                <button onClick={() => removeItem(props.id)} className="bg-red-500 p-2 rounded-md font-poppins text-rose-100">Remove</button>
+                <button onClick={() => removeItem(props.id)} className="bg-red-500 p-2 rounded-md font-poppins text-rose-100 transition-all hover:bg-red-400 hover:scale-125">Remove</button>
             </div> }
     </div>
   )

@@ -1,36 +1,36 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 
 type Props = {
-    children: ReactNode
+    children: ReactNode;
 }
 
 type CartItem = {
-    id: number
-    quantity: number
+    id: number;
+    quantity: number;
 }
 
 type ShoppingCartContext = {
-    getItemQuantity: (id: number) => number
-    increaseItemQuantity: (id: number) => void
-    decreaseItemQuantity: (id: number) => void
-    removeItem: (id: number) => void
-    cartQuantity: number,
-    cartItems: CartItem[]
+    getItemQuantity: (id: number) => number;
+    increaseItemQuantity: (id: number) => void;
+    decreaseItemQuantity: (id: number) => void;
+    removeItem: (id: number) => void;
+    cartQuantity: number;
+    cartItems: CartItem[];
 }
 
 const ShoppingCartContext = createContext({} as ShoppingCartContext)
 
 export function useCart() {
-    return useContext(ShoppingCartContext)
+    return useContext(ShoppingCartContext);
 }
 
 export function ShoppingCartProvider( { children }: Props ) {
-    const [cartItems, setCartItems] = useState<CartItem[]>([])
+    const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
-    const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0)
+    const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0);
 
     function getItemQuantity(id: number) {
-        return cartItems.find(item => item.id === id)?.quantity || 0
+        return cartItems.find(item => item.id === id)?.quantity || 0;
     }
 
     function increaseItemQuantity(id: number) {

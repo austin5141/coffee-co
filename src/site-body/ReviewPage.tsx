@@ -100,7 +100,7 @@ function Review() {
             <div className={state.modalOpen ? "fixed w-screen h-screen bg-modalbg" : "hidden"} onClick={() => { dispatch({ type: REDUCER_ACTION_TYPE.CLOSE_MODAL }) }}></div> 
 
             <div>                
-                <form name="review-form" className="flex flex-col align-center max-w-256 h-96 mx-auto mt-32 bg-rose-900 p-4 rounded-lg" onSubmit = {handleSubmit}>
+                <form name="review-form" className="flex flex-col align-center max-w-256 h-96 mx-auto mt-32 bg-rose-900 p-4 rounded-lg mb-20" onSubmit = {handleSubmit}>
                     { state.emailError ? <p className="text-red-300">Please enter a valid email address.</p> : null }
                     <input ref={emailInput} name="email-input" onChange={handleEmailChange} type="text" placeholder="Email" className="mb-5 h-16 p-2 rounded-md" value={state.email} id="email-input"/>
                     { state.messageError ? <p className="text-red-300">Please enter a message.</p> : null }
