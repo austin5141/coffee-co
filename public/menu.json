@@ -2,55 +2,55 @@
     {
         "id": 1,
         "name": "Placeholder Text",
-        "price": 12.34,
+        "price": 2.99,
         "img": "/iced-coffee.jpg"
     },
     {
         "id": 2,
         "name": "Placeholder Text",
-        "price": 12.34,
+        "price": 2.99,
         "img": "/espresso.jpg"
     },
     {
         "id": 3,
         "name": "Placeholder Text",
-        "price": 12.34,
+        "price": 2.99,
         "img": "/black.jpg"
     },
     {
         "id": 4,
         "name": "Placeholder Text",
-        "price": 12.34,
+        "price": 2.99,
         "img": "/black.jpg"
     },
     {
         "id": 5,
         "name": "Placeholder Text",
-        "price": 12.34,
+        "price": 2.99,
         "img": "/black.jpg"
     },
     {
         "id": 6,
         "name": "Placeholder Text",
-        "price": 12.34,
+        "price": 2.99,
         "img": "/black.jpg"
     },
     {
         "id": 7,
         "name": "Placeholder Text",
-        "price": 12.34,
+        "price": 2.99,
         "img": "/black.jpg"
     },
     {
         "id": 8,
         "name": "Placeholder Text",
-        "price": 12.34,
+        "price": 2.99,
         "img": "/black.jpg"
     },
     {
         "id": 9,
         "name": "Placeholder Text",
-        "price": 12.34,
+        "price": 2.99,
         "img": "/black.jpg"
     }    
 ]

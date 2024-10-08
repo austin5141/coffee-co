@@ -20,12 +20,12 @@ function MenuItem(props: Props) {
         <h2 className="font-bold font-poppins text-xl ml-10 mt-3 text-white">{props.itemname}</h2>
         <h3 className="font-light font-poppins text-lg ml-10 mt-3 text-white">{props.price}</h3>
         {quantity === 0 
-          ? (<button onClick={ () => increaseItemQuantity(props.id) } className="text-white font-poppins ml-10 border-2 mt-2 border-rose-500 rounded-md p-1 transition-all hover:bg-rose-500 hover:scale-125">Add To Cart</button>) 
+          ? (<button onClick={ () => increaseItemQuantity(props.id, props.price) } className="text-white font-poppins ml-10 border-2 mt-2 border-rose-500 rounded-md p-1 transition-all hover:bg-rose-500 hover:scale-125">Add To Cart</button>) 
           : <div className="flex flex-col items-center gap-5 mt-2">
                 <div className="flex gap-5">
-                  <button onClick={ () => decreaseItemQuantity(props.id)} className="bg-rose-500 w-7 h-8 font-poppins font-medium rounded-md text-white">-</button>
+                  <button onClick={ () => decreaseItemQuantity(props.id, props.price)} className="bg-rose-500 w-7 h-8 font-poppins font-medium rounded-md text-white">-</button>
                   <span className="text-2xl text-rose-300">{quantity} in cart</span>
-                  <button onClick={ () => increaseItemQuantity(props.id)} className="bg-rose-500 w-7 h-8 font-poppins font-medium rounded-md text-white">+</button>
+                  <button onClick={ () => increaseItemQuantity(props.id, props.price)} className="bg-rose-500 w-7 h-8 font-poppins font-medium rounded-md text-white">+</button>
                 </div>
                 <button onClick={() => removeItem(props.id)} className="bg-red-500 p-2 rounded-md font-poppins text-rose-100 transition-all hover:bg-red-400 hover:scale-125">Remove</button>
             </div> }

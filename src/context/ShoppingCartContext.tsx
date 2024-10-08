@@ -7,14 +7,16 @@ type Props = {
 type CartItem = {
     id: number;
     quantity: number;
+    price: number;
 }
 
 type ShoppingCartContext = {
     getItemQuantity: (id: number) => number;
-    increaseItemQuantity: (id: number) => void;
-    decreaseItemQuantity: (id: number) => void;
+    increaseItemQuantity: (id: number, price: number) => void;
+    decreaseItemQuantity: (id: number, price: number) => void;
     removeItem: (id: number) => void;
     cartQuantity: number;
+    totalPrice: number;
     cartItems: CartItem[];
 }
 
@@ -29,18 +31,22 @@ export function ShoppingCartProvider( { children }: Props ) {
 
     const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0);
 
+    const totalPrice = cartItems.reduce((price, item) => item.price + price, 0);
+
     function getItemQuantity(id: number) {
         return cartItems.find(item => item.id === id)?.quantity || 0;
     }
 
-    function increaseItemQuantity(id: number) {
+    function increaseItemQuantity(id: number, itemPrice: number ) {
+        console.log(cartItems)
         setCartItems(currItems => {
             if (currItems.find(item => item.id === id) == null) {
-                return [...currItems, { id, quantity: 1 } ]
+                console.log(cartItems)
+                return [...currItems, { id, quantity: 1, price: itemPrice  } ]
             } else {
                 return currItems.map(item => {
                     if (item.id === id) {
-                        return { ...item, quantity: item.quantity + 1 }
+                        return { ...item, quantity: item.quantity + 1, price: itemPrice + item.price }
                     } else {
                         return item
                     }
@@ -49,14 +55,14 @@ export function ShoppingCartProvider( { children }: Props ) {
         })
     }
 
-    function decreaseItemQuantity(id: number) {
+    function decreaseItemQuantity(id: number, itemPrice: number) {
         setCartItems(currItems => {
             if (currItems.find(item => item.id === id)?.quantity === 1) {
                 return currItems.filter(item => item.id !== id)
             } else {
                 return currItems.map(item => {
                     if (item.id === id) {
-                        return { ...item, quantity: item.quantity - 1 }
+                        return { ...item, quantity: item.quantity - 1, price: itemPrice - item.price }
                     } else {
                         return item
                     }
@@ -78,6 +84,7 @@ export function ShoppingCartProvider( { children }: Props ) {
             decreaseItemQuantity, 
             removeItem,
             cartItems,
+            totalPrice,
             cartQuantity 
             }}>
             {children}
