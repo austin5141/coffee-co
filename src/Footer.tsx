@@ -6,7 +6,7 @@ function Footer() {
         <div className="flex items-center justify-between">
             <div className="text-center mt-10 ml-10">
                 <i className="fa-solid fa-mug-hot text-3xl mr-3 text-white"></i>
-                <NavLink to="/" className="text-white no-underline text-4xl font-thin font-teko tracking-wider relative top-1">CoffeeCo</NavLink>
+                <NavLink to="/" className="text-white no-underline text-4xl font-thin font-teko tracking-wider relative top-1">The Coffee Hub</NavLink>
             </div>
 
             <div className='mr-10 mt-10 flex gap-5'>

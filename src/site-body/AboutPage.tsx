@@ -1,30 +1,28 @@
 import AboutCard from "./Cards/AboutCard"
+import LocationCard from "./Cards/LocationCard"
+import PhoneCard from "./Cards/PhoneCard"
 
 function AboutPage() {
     return (
-        <>
-        <div className="grid grid-cols-1 md:grid-rows-2 md:grid-cols-2 xl:grid-cols-3 justify-items-center mt-20 gap-14">
-            <AboutCard 
-                    heading="About Us"
-                    body="CoffeeCo&trade; is a small business formed on October 1, 2024 that sells coffee."
-                    img="coffeebeans.jpg"
-                    icon="fa-solid fa-comment"
-                />
-                
-            <AboutCard 
+        <>        
+                <AboutCard 
+                        heading="About Us"
+                        body="The Coffee Hub is a small business formed on October 1, 2024 that sells all sorts of coffee."
+                        img="coffeebeans.jpg"
+                        icon="fa-solid fa-comment"
+                    />
+                    
+                <LocationCard 
                     heading="Location"
-                    body="CoffeeCo's main building is set on 123 Main St, Hartford CT, but we're looking to expand to other parts of the state."
-                    img="coffee.jpg"
+                    body="The Coffee Hub's main building is set on 123 Main St, Hartford CT, but we're currently looking to expand to other parts of the state."
                     icon="fa-solid fa-location-dot"
                 />
 
-            <AboutCard 
-                    heading="Phone"
-                    body="Call us today at (860)-123-4567."
-                    img="coffee-person.jpg"
-                    icon="fa-solid fa-phone"
-                />  
-        </div>
+                <PhoneCard 
+                        heading="Phone"
+                        body="Call us today at (860)-123-4567."
+                        icon="fa-solid fa-phone"
+                    />  
         </>
     )
 }
