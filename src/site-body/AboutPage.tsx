@@ -14,7 +14,8 @@ function AboutPage() {
                     
                 <LocationCard 
                     heading="Location"
-                    body="The Coffee Hub's main building is set on 123 Main St, Hartford CT, but we're currently looking to expand to other parts of the state."
+                    body="The Coffee Hub's main building is set on 123 Main St, Hartford CT, but we're currently looking to expand to other parts of the state.
+                        Open Mon-Sat, 10:00 AM-6:00 PM."
                     icon="fa-solid fa-location-dot"
                 />
 

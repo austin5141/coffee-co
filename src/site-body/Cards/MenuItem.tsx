@@ -15,8 +15,8 @@ function MenuItem(props: Props) {
   let quantity = getItemQuantity(props.id);
 
   return (
-    <div key={props.id} className="bg-rose-900 rounded-2xl p-5">
-        <img src={props.img} alt="" className="w-full rounded-2xl" />
+    <div key={props.id} className="w-96 md:w-full bg-rose-900 rounded-2xl p-5 mx-auto">
+        <img src={props.img} alt="" className="w-60 mx-auto md:w-full rounded-2xl" />
         <h2 className="font-bold font-poppins text-xl ml-10 mt-3 text-white">{props.itemname}</h2>
         <h3 className="font-light font-poppins text-lg ml-10 mt-3 text-white">{props.price}</h3>
         {quantity === 0 
