@@ -1,4 +1,4 @@
-import { FormEventHandler, useState } from "react";
+import { useState } from "react";
 import { useCart } from "../context/ShoppingCartContext";
 
 function Order() {
